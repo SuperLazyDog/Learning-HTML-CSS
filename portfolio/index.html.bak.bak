@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="ja">
+		<title>01.html</title>
+		<link rel="stylesheet" href="../common/css/normalize.css">
+		<link rel="stylesheet" href="../common/css/style.css">
+	</head>
+	<body>
+	<div id="page">
+	<header id="pageHead">
+		<h1 id="siteTitle">komorikomasha</h1>
+		<p id="catchcopy">一人じゃできないことも、力を合わせればできる。やってみたいをカタチにする、三人の楽しいものづくり</p>
+		<nav class="globalNavi">
+			<ul>
+				<li><a href="../index.html">ホーム</a></li>
+				<li><a href="../about/index.html">私たちについて</a></li>
+				<li class="current"><a href="index.html">作ったもの</a></li>
+				<li><a href="../contact/index.html">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<p class="topicPath"><a href="../index.com">ホーム</a> &gt; 作ったもの</p>
+	<div id="pageBody">
+	<div id="pageBodyMain">
+		<h1 class="pageTitle">作ったもの</h1>
+	<!--pageBodyMain--></div>
+	<div id="pageBodySub">
+	<div class="localNavi">
+		<ul>
+			<li><a href="03.html">バッタになりたい魔法使い</a></li>
+			<li><a href="02.html">WordPressデザインワークブック</a></li>
+			<li><a href="01.html">Cafe Debut</a></li>
+		</ul>
+	</div>
+	<section class="newsList">
+		<h2>お知らせ</h2>
+		<ul>
+			<li><time datetime="2013-10-01">2013.10.01</time>コモモとモリコ、書籍「HTML/CSSの教科書」を執筆中です。楽しみに</li>
+			<li><time datetime="2013-10-01">2013.10.01</time>このサイトをオープンしました</li>
+		</ul>
+	</section>
+	<!--pageBodySub--></div>
+	<!--pageBody--></div>
+	<footer id="pageFoot">
+		<p id="copyright"><small>Copyright&copy; 2017 @XuWeida All Rights Reserved.</p>
+	</footer>
+	<!--page--></div>
+	</body>
+</html>
