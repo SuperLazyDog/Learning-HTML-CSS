@@ -7,7 +7,7 @@
 		text-align: center;
 		border-style: solid;
 		border-color: orange;
-		border-width: 0 2px 2px 2px;
+		border-width: 2px;
 		padding: 10px 0 10px 0; 
 		margin: 0 0 15px 0;
 		background: url("https://d1f5hsy4d47upe.cloudfront.net/f9/f9a2f49b0c533eaaaed707e2812e26ed_t.jpeg");
@@ -36,20 +36,23 @@
 		border-width: 0 0 2px 0;
 	}
 	.table .tableTitle {
-		text-weight: body;
+		font-size: 15px;
+		font-weight: bold;
 		text-align: center;
 		border-style: solid;
 		border-color: orange;
 		border-width: 0 0 2px 0;
 	}
 	.table .tableFoot {
-		text-weight: body;
+		font-weight: bold;
 		text-align: center;
 		border-style: solid;
 		border-color: orange;
 		border-width: 0 0 0 0;
 	}
 	.table .tableMenu th {
+		font-size: 14px;
+		font-weight:bold;
 		border-style: solid;
 		border-color: orange;
 		border-width: 0 0 2px 0;
@@ -58,6 +61,36 @@
 	.table .indicatorInstruction tr th:nth-child(1) {
 		font-weight:bold;
 	}
+	
+	.table .paramaterInstruction tr th:nth-child(1) {
+		font-weight:bold;
+	}
+
+	.table .indicatorInstruction tr th .red {
+		color: red;
+		font-weight: bold;
+		font-size: normal;
+	}
+	
+	.table .update_1st_item {
+		width: 20%;
+	}
+
+	.table .update_2nd_item {
+		width: 60%;
+	}
+
+	.paragraph p {
+		text-align: left;
+		text-indent: 25%;
+	}
+	.paragraph .bold {
+		font-weight: bold;
+	}
+	.paragraph .point {
+		font-weight: bold;
+		text-indent: 20%;
+	}
 
  </style>
   <meta charset="UTF-8">
@@ -65,14 +98,31 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <title>Document</title>
+  <title>EA販売ページ　テンプレート</title>
  </head>
 
  <body>
   <!-- スタイルシートを使用しない場合はこちらを削除してください。-->
 	<div class="paragraph">
-		<h3>説明</h3>
+		<h2 style="font-size:25px;">説明</h2>
+		<p class="point"> 無駄に長い説明が皆さんにもお目にかかりたくないし私にも苦痛と考えておりますので、</p>
+		<p class="point">本当に必要なものだけ説明しようと思います。</p>
+		<br>
+		<p class="point">ポイント1</p>
+		<p class="bold">損失がでるポジションの損失を抑えて、より安心して使えるEAです！</p>
+		<p class="bold">つまり、1ポジション当たりの収益　>　1ポジション当たりの損失！</P>
+		<p>*詳細は<a href="http://fx-on.com/systemtrade/detail/?id=11871&t=1#c">バックテスト</a>をご確認ください</p>
+		<br>
+		<p class="point">ポイント2</p>
+		<p class="bold">円建てでもドル建てでも収益が変わらない!</p>
+		<p class="bold">円建ての方にもドル建ての方にも使えます!</p>
+		<br>
+		<p class="point">ポイント3</p>
+		<p class="bold">パラメータ設定チェック!</p>
+		<p class="bold">万が一パラメータ設定が間違っても損失にはなりません！</p>
 		<p></p>
+		<p></p>
+		<img src="/asp/if/dev/upfile/11871/strategytester.gif" alt="strategytester.gif" />
 	</div>
 
 
@@ -89,26 +139,26 @@
 				</tr>
 			</thead>
 
-			<tbody>
+			<tbody class="paramaterInstruction">
 				<tr>
-					<th><a href="http://www.metasys-seeker.net/MQL4_Reference_ver1/18-08_iBands.html"  target="_blank">ボリンジャーバンド</a></th>
+					<th><a href="https://www.sevendata.co.jp/shihyou/technical/bori.html"  target="_blank">ボリンジャーバンド</a></th>
 					<th>トレンドの反転をつかめるのに役立つ</th>
 				</tr>
 
 				<tr>
-					<th><a href="http://www.metasys-seeker.net/MQL4_Reference_ver1/18-03_iAlligator.html" target="_blank">アリゲーター</a></th>
+					<th><a href="https://www.metatrader5.com/ja/terminal/help/indicators/bw_indicators/alligator" target="_blank">アリゲーター</a></th>
 					<th>主にフラクタルと一緒に使う</th>
 				</tr>
 
 				<tr>
-					<th><a href="http://www.metasys-seeker.net/MQL4_Reference_ver1/18-18_iFractals.html" target="_blank">フラクタル</a></th>
+					<th><a href="http://ehadou.blogspot.jp/2016/12/fractale.html" target="_blank">フラクタル</a></th>
 					<th>主にアリゲーターと一緒に使う</th>
 				</tr>
 			</tbody>
 
 			<tfoot>
 				<tr>
-					<th class="tableFoot"  colspan="2"></th>
+					<th class="tableFoot"  colspan="2" style="text-align: left; padding-left: 5px;">インジケーター名を押したらリンク先へ</th>
 				</tr>
 			</tfoot>
 		</table>
@@ -130,27 +180,75 @@
 			<tbody class="indicatorInstruction">
 				<tr>
 					<th>最大ロット数</th>
-					<th>パラメータLOTSで設定可能<br>デフォルト: 0.1<br>推奨値：0.1、変更しないようにしてください</th>
+					<th>パラメータ<span class="red">LOTS</span>で設定可能<br>デフォルト: 0.1<br>推奨値：0.1、変更しないようにしてください</th>
 				</tr>
 
 				<tr>
 					<th>マジックナンバー</th>
-					<th>パラメータMagicNumberで設定可能、ほかのEAと区別するため<br>デフォルト:0xFFFFFFF<br>推奨値：ほかのEAと違いさえあれば自由に設定できます</th>
+					<th>パラメータ<span class="red">MagicNumber</span>で設定可能、ほかのEAと区別するため<br>デフォルト:0xFFFFFFF<br>推奨値：ほかのEAと違いさえあれば自由に設定できます</th>
 				</tr>
 
 				<tr>
 					<th>最大ポジション数</th>
-					<th>パラメータPositionsで設定可能<br>デフォルト：1<br>推奨値：1、変更しないようにしてください</th>
+					<th>パラメータ<span class="red">Positions</span>で設定可能<br>デフォルト：1<br>推奨値：1、変更しないようにしてください</th>
 				</tr>
 
 				<tr>
 					<th>スリッページ</th>
-					<th>パラメータSlippageで設定可能<br>デフォルト：3<br>推奨値：0~3</th>
+					<th>パラメータ<span class="red">Slippage</span>で設定可能<br>デフォルト：3<br>推奨値：0~3</th>
 				</tr>
 
 				<tr>
 					<th>その他</th>
-					<th>変更をお勧めしませんが、SL,TPなどユーザー様が設定できるようにしようと考えています。</th>
+					<th>変更をお勧めしませんが、<span class="red">SL</span>,<span class="red">TP</span>などユーザー様が設定できるようにしようと考えています。</th>
+				</tr>
+			</tbody>
+
+			<tfoot>
+				<tr>
+					<th class="tableFoot"  colspan="2"></th>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+
+	<div class="table">
+		<table>
+			<thead>
+				<tr>
+					<th class="tableTitle" colspan="2" >更新歴</th>
+				</tr>
+
+				<tr class="tableMenu">
+					<th class="update_1st_item" style="border-width: 0 2px 2px 0;">日付</th>
+					<th class="update_2nd_item">更新内容</th>
+				</tr>
+			</thead>
+
+			<tbody class="indicatorInstruction">
+				<tr>
+					<th class="update_1st_item" style="border-width: 0 2px 2px 0;">2017/06/14</th>
+					<th>説明ページを作成</th>
+				</tr>
+
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+
+				<tr>
+					<th></th>
+					<th></th>
 				</tr>
 			</tbody>
 
